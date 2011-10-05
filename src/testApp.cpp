@@ -81,11 +81,11 @@ void testApp::setup()
     // set border color for quads in setup mode
     borderColor = 0x666666;
     // starts in quads setup mode
-    isSetup = True;
+    isSetup = true;
     // starts running
-    bStarted = True;
+    bStarted = true;
     // default is not using MostPixelsEver
-    bMpe = False;
+    bMpe = false;
     // starts in windowed mode
     bFullscreen	= 0;
     // gui is on at start
@@ -241,7 +241,7 @@ void testApp::openVideoFile()
 void testApp::mpeSetup()
 {
     stopProjection();
-    bMpe = True;
+    bMpe = true;
     // MPE stuff
     lastFrameTime = ofGetElapsedTimef();
     client.setup("mpe_client_settings.xml", true); //false means you can use backthread
@@ -620,23 +620,23 @@ void testApp::keyPressed(int key)
     {
         if (isSetup)
         {
-            isSetup = False;
+            isSetup = false;
             for(int i = 0; i < 36; i++)
             {
                 if (quads[i].initialized)
                 {
-                    quads[i].isSetup = False;
+                    quads[i].isSetup = false;
                 }
             }
         }
         else
         {
-            isSetup = True;
+            isSetup = true;
             for(int i = 0; i < 36; i++)
             {
                 if (quads[i].initialized)
                 {
-                    quads[i].isSetup = True;
+                    quads[i].isSetup = true;
                 }
             }
         }
@@ -839,7 +839,7 @@ void testApp::resync()
             if (quads[i].colorBg && quads[i].transBg)
             {
                 quads[i].transCounter = 0;
-                quads[i].transUp = True;
+                quads[i].transUp = true;
             }
         }
     }
@@ -848,12 +848,12 @@ void testApp::resync()
 //--------------------------------------------------------------
 void testApp::startProjection()
 {
-    bStarted = True;
+    bStarted = true;
     for(int i = 0; i < 36; i++)
     {
         if (quads[i].initialized)
         {
-            quads[i].isOn = True;
+            quads[i].isOn = true;
             if (quads[i].videoBg && quads[i].video.isLoaded())
             {
                 quads[i].video.setVolume(quads[i].videoVolume);
@@ -866,12 +866,12 @@ void testApp::startProjection()
 //--------------------------------------------------------------
 void testApp::stopProjection()
 {
-    bStarted = False;
+    bStarted = false;
     for(int i = 0; i < 36; i++)
     {
         if (quads[i].initialized)
         {
-            quads[i].isOn = False;
+            quads[i].isOn = false;
             if (quads[i].videoBg && quads[i].video.isLoaded())
             {
                 quads[i].video.setVolume(0);

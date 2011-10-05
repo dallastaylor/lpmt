@@ -58,21 +58,21 @@
         borderColor = 0x666666;
 
 	    // sets default variables
-        initialized = True;
-        isSetup = True;
-        isOn = True;
-        colorBg = False;
-        transBg = False;
-        transUp = True;
-        camBg = False;
-        camGreenscreen = False;
-        imgBg = False;
-        videoBg = False;
-        videoLoop = True;
-        videoGreenscreen = False;
-        slideshowBg = False;
-        slideFit = False;
-        slideKeepAspect = True;
+        initialized = true;
+        isSetup = true;
+        isOn = true;
+        colorBg = false;
+        transBg = false;
+        transUp = true;
+        camBg = false;
+        camGreenscreen = false;
+        imgBg = false;
+        videoBg = false;
+        videoLoop = true;
+        videoGreenscreen = false;
+        slideshowBg = false;
+        slideFit = false;
+        slideKeepAspect = true;
 
 	    camWidth = 640;
 	    camHeight = 480;
@@ -279,7 +279,7 @@
         // slideshow -----------------------------------------------------------------
         if (slideshowBg) {
         // put it to off while loading images
-        slideshowBg = False;
+        slideshowBg = false;
         string slideshowName = slideshows[bgSlideshow];
         // if a different slideshow has been chosen in gui we do load its images
         if (slideshowName != loadedSlideshow) {
@@ -309,7 +309,7 @@
         // update fps
         //if (abs(fps-ofGetFrameRate()) > 50) {fps = ofGetFrameRate();}
         slideFramesDuration = (slideshowSpeed * fps);
-        slideshowBg = True;
+        slideshowBg = true;
         }
 
         //we set matrix to the default - 0 translation

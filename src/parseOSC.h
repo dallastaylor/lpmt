@@ -140,23 +140,23 @@ void testApp::parseOsc()
     {
         if (isSetup)
         {
-            isSetup = False;
+            isSetup = false;
             for(int i = 0; i < 36; i++)
             {
                 if (quads[i].initialized)
                 {
-                    quads[i].isSetup = False;
+                    quads[i].isSetup = false;
                 }
             }
         }
         else
         {
-            isSetup = True;
+            isSetup = true;
             for(int i = 0; i < 36; i++)
             {
                 if (quads[i].initialized)
                 {
-                    quads[i].isSetup = True;
+                    quads[i].isSetup = true;
                 }
             }
         }
