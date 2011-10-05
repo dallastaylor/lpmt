@@ -15,6 +15,7 @@ CVS/
 .svn/
 
 /bin/projection_mapping*
+/bin/emptyExampleDebug.app/
 /bin/lpmt*
 /bin/data/_*.xml
 /bin/data/video/house*
