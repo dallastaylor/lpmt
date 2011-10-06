@@ -141,6 +141,10 @@
 	    colorGreenscreen.a = 0;
 
 	    thresholdGreenscreen = 10;
+		
+		string videoPath = ofToDataPath("video",true);
+		
+	//	loadVideoFromFile("fingers.mov", videoPath + "/fingers.mov");
 
     }
 
@@ -286,9 +290,9 @@
             // we exclude "." and ".." directories if present
             if (slideshowName != "." && slideshowName != "..") {
             // we scan the img dir for images
-            string slidesDir = string("./data/slideshow/");
-            slidesDir += slideshowName;
-            // make two arrays, one for imgs names and one for images
+			string slidesDir = ofToDataPath("slideshow",true);
+			slidesDir += "/" + slideshowName;
+			// make two arrays, one for imgs names and one for images
             slidesnames = vector<string>();
             slides = vector<ofImage>();
             // read all content of show folder
