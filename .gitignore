@@ -15,7 +15,6 @@ CVS/
 .svn/
 
 /bin/projection_mapping*
-/bin/emptyExampleDebug.app/
 /bin/lpmt*
 /bin/data/_*.xml
 /bin/data/video/house*
@@ -29,6 +28,7 @@ CVS/
 *.d
 
 # XCode specific files
+/bin/emptyExampleDebug.app/
 build/
 *.mode1v3
 *.pbxuser
