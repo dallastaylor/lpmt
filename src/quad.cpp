@@ -141,10 +141,6 @@
 	    colorGreenscreen.a = 0;
 
 	    thresholdGreenscreen = 10;
-		
-		string videoPath = ofToDataPath("video",true);
-		
-	//	loadVideoFromFile("fingers.mov", videoPath + "/fingers.mov");
 
     }
 
